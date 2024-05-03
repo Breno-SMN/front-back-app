@@ -53,12 +53,7 @@ const app = Vue.createApp({
                 if (!response.ok) {
                     this.exibirErro = true;
                 } else {
-                    await fetch(`${API_URL}/`, {
-                        method: 'GET',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        }
-                    });
+                    window.open('../front-game/index.html', '_blank');
                 }
                 console.log('Usuario validado com sucesso.');
             } catch (error) {
