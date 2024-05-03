@@ -111,12 +111,12 @@ app.get('/validarUsuario', async (req, res) => {
 });
 
 // Rota para servir o arquivo HTML principal
-app.get('/game', (req, res) => {
-    res.sendFile(path.join(__dirname, 'front-game', 'index.html'));
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'front-game', 'login.html'));
 });
 
-app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname, 'front-game', 'login.html'));
+app.get('/game', (req, res) => {
+    res.sendFile(path.join(__dirname, 'front-game', 'index.html'));
 });
 
 app.get('/dashboard', (req, res) => {
