@@ -116,7 +116,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/game', (req, res) => {
-    res.sendFile(path.join(__dirname, 'front-game', 'index.html'));
+    res.sendFile(path.join(__dirname, 'front-game', 'game.html'));
 });
 
 app.get('/dashboard', (req, res) => {
