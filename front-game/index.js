@@ -1,5 +1,5 @@
 const { createApp } = Vue;
-const API_URL = 'http://localhost:3000';
+const API_URL = 'https://front-back-app-git-main-breno-smns-projects.vercel.app';
 
 createApp({
     data() {
