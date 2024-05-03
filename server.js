@@ -22,7 +22,8 @@ app.use(cors());
 app.use(express.json());
 
 // Servir arquivos estáticos (como index.html)
-app.use(express.static(path.join(__dirname)));
+app.use(express.static(path.join(__dirname, 'front-login')));
+app.use(express.static(path.join(__dirname, 'front-game')));
 
 // Rota para atualizar a vida do herói e do vilão
 app.post('/atualizarVida', async (req, res) => {
@@ -112,15 +113,15 @@ app.get('/validarUsuario', async (req, res) => {
 
 // Rota para servir o arquivo HTML principal
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'front-game/index.html'));
+    res.sendFile(path.join(__dirname, 'front-game', 'index.html'));
 });
 
 app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname, 'front-login/index.html'));
+    res.sendFile(path.join(__dirname, 'front-login', 'index.html'));
 });
 
 app.get('/dashboard', (req, res) => {
-    res.sendFile(path.join(__dirname, 'front-game/dashboard.html'));
+    res.sendFile(path.join(__dirname, 'front-game', 'dashboard.html'));
 });
 
 // Iniciar o servidor
