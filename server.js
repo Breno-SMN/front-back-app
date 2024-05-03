@@ -112,7 +112,7 @@ app.get('/validarUsuario', async (req, res) => {
 });
 
 // Rota para servir o arquivo HTML principal
-app.get('/', (req, res) => {
+app.get('/game', (req, res) => {
     res.sendFile(path.join(__dirname, 'front-game', 'index.html'));
 });
 
