@@ -53,7 +53,7 @@ const app = Vue.createApp({
                 if (!response.ok) {
                     this.exibirErro = true;
                 } else {
-                    window.open('../front-game/index.html', '_self');
+                    window.location.href = '/front-game/index.html';
                 }
                 console.log('Usuario validado com sucesso.');
             } catch (error) {
